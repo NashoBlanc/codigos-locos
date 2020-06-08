@@ -1,0 +1,9 @@
+  maskEmail(email: string) {
+    const emailWithoutDomain = email.slice(0, email.search('@'));
+    this.maskedMail = this.mask(emailWithoutDomain) + email.slice(email.search('@'), email.length);
+  }
+
+  mask(value: string) {
+    return value.substr(0, value.length - 5) + 'XXXXX';
+  }
+
