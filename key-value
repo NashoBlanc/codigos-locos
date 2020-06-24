@@ -1,0 +1,8 @@
+      <select id="ipt-direction" class="form-control" formControlName="department" 
+        (change)="departmentChanged($event.target.value)">
+        <option value="">Selecciona una opción</option>
+        <option [value]="item.key" *ngFor="let item of listDepartment | keyvalue">{{item.value}}</option>
+      </select>
+
+
+-- esta wea, recorre objectos key y value y OJO cuando pasas [value]="obj.value" es la unica forma que tenga esta wea el valor del objecto :D
